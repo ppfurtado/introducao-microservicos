@@ -11,6 +11,6 @@ public class Payroll {
     private String workerName;
     private String description;
     private Double hourlyPrice;
-    private String workedhours;
-    private String totalPayment;
+    private Double workedhours;
+    private Double totalPayment;
 }
