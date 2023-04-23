@@ -6,6 +6,6 @@ import java.util.List;
 
 public interface UserService {
 
-    User findById(Long id) throws Exception;
+    User findById(Long id);
     List<User> findAll();
 }
