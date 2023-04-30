@@ -2,7 +2,7 @@ package com.ppfurtado.payrollapi.services;
 
 import com.ppfurtado.payrollapi.domain.Payroll;
 import com.ppfurtado.payrollapi.feignClients.UserFeign;
-import com.ppfurtado.payrollapi.services.excpetions.ObjectNotFoundExcpetion;
+import com.ppfurtado.payrollapi.services.excpetions.ObjectNotFoundException;
 import feign.FeignException;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -33,7 +33,7 @@ public class PayrollService {
                 );
             }
         }catch (FeignException.NotFound ex){
-            throw new ObjectNotFoundExcpetion("Object not found");
+            throw new ObjectNotFoundException("Object not found");
         }catch (Exception e) {
             throw new IllegalArgumentException("Ilegal argument excetion");
         }
