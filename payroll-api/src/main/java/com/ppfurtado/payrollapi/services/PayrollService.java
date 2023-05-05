@@ -28,8 +28,8 @@ public class PayrollService {
                         user.getName(),
                         payroll.getDescription(),
                         user.getHourlyPrice(),
-                        payroll.getWorkedhours(),
-                        payroll.getWorkedhours() * user.getHourlyPrice()
+                        payroll.getWorkedHours(),
+                        payroll.getWorkedHours() * user.getHourlyPrice()
                 );
             }
         }catch (FeignException.NotFound ex){
